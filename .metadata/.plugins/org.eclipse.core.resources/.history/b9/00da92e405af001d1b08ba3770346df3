@@ -1,0 +1,26 @@
+package LacosCondicional;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String[] produtos = {"Cachorro Quente", "X-Salada", "X-Bacon", "Bauru", "Refrigerante", "Suco de laranja"};
+        double[] precos = {10.0, 15.0, 18.0, 12.0, 8.0, 13.0};
+
+        System.out.print("Digite o código do produto: ");
+        int codigo = sc.nextInt();
+
+        System.out.print("Digite a quantidade: ");
+        int quantidade = sc.nextInt();
+
+        double valorTotal = precos[codigo - 1] * quantidade;
+        String nomeProduto = produtos[codigo - 1];
+
+         System.out.printf("Produto comprado: %s%n", nomeProduto);
+         System.out.printf("Valor total da conta: R$ %.2f%n", valorTotal);
+
+        sc.close();
+    }
+}
+

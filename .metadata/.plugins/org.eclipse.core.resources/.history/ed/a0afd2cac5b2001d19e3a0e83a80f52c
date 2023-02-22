@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class exercicio_do {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Digite o segundo número: ");
+        int num2 = sc.nextInt();
+
+        if (num1 >= num2) {
+            System.out.println("Intervalo inválido!");
+            System.exit(0);
+        }
+
+        System.out.print("Múltiplos de 3 e 5 no intervalo: ");
+        for (int i = num1; i <= num2; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+        sc.close();
+    }
+}

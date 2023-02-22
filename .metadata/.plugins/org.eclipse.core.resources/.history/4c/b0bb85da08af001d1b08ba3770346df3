@@ -1,0 +1,62 @@
+package LacosCondicional;
+import java.util.Scanner;
+
+public class exerciciolaço4 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Nome do colaborador: ");
+        String nome = input.nextLine();
+
+        System.out.print("Cargo (1 - Gerente, 2 - Vendedor, 3 - Supervisor, 4 - Motorista, 5 - Estoquista, 6 - Técnico de TI): ");
+        int codigoCargo = input.nextInt();
+
+        System.out.print("Salário: R$ ");
+        float salario = input.nextFloat();
+
+        String cargo = "";
+        float reajuste = 0;
+
+        switch (codigoCargo) {
+            case 1:
+                cargo = "Gerente";
+                reajuste = 0.1f;
+                break;
+            case 2:
+                cargo = "Vendedor";
+                reajuste = 0.07f;
+                break;
+            case 3:
+                cargo = "Supervisor";
+                reajuste = 0.09f;
+                break;
+            case 4:
+                cargo = "Motorista";
+                reajuste = 0.06f;
+                break;
+            case 5:
+                cargo = "Estoquista";
+                reajuste = 0.05f;
+                break;
+            case 6:
+                cargo = "Técnico de TI";
+                reajuste = 0.08f;
+                break;
+            default:
+                System.out.println("Código de cargo inválido!");
+                System.exit(0);
+        }
+
+        float novoSalario = salario + (reajuste * salario);
+
+        System.out.println("Nome do colaborador: " + nome);
+        System.out.println("Cargo: " + cargo);
+        System.out.printf("Salário: R$ %.2f\n", novoSalario);
+
+        input.close();
+
+    }
+
+}
