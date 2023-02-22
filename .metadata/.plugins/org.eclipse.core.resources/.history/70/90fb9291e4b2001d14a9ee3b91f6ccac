@@ -1,0 +1,45 @@
+package Projeto;
+
+public class Gerente extends Funcionario {
+    private String departamento;
+
+    public Gerente(String nome, String cpf, String cargo, double salario, int idade, String departamento) {
+        super(nome, cpf, cargo, salario, idade);
+        this.departamento = departamento;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public void visualizar() {
+        super.visualizar();
+        System.out.println("Departamento: " + departamento);
+    }
+}
+
+public class Vendedor extends Funcionario {
+    private int vendasRealizadas;
+
+    public Vendedor(String nome, String cpf, String cargo, double salario, int idade, int vendasRealizadas) {
+        super(nome, cpf, cargo, salario, idade);
+        this.vendasRealizadas = vendasRealizadas;
+    }
+
+    public int getVendasRealizadas() {
+        return vendasRealizadas;
+    }
+
+    public void setVendasRealizadas(int vendasRealizadas) {
+        this.vendasRealizadas = vendasRealizadas;
+    }
+
+    public void visualizar() {
+        super.visualizar();
+        System.out.println("Vendas Realizadas: " + vendasRealizadas);
+    }
+}

@@ -1,0 +1,11 @@
+package Projeto;
+public class TestaFuncionario {
+    public static void main(String[] args) {
+        Funcionario funcionario1 = new Funcionario("João Gilberto", "123.456.789-00", "Cantor", 4500.00, 82);
+        Funcionario funcionario2 = new Funcionario("Maria Rita", "987.654.321-00", "Cantora", 6800.00, 43);
+
+        funcionario1.visualizar();
+        System.out.println();
+        funcionario2.visualizar();
+    }
+}

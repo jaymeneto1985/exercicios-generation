@@ -1,0 +1,24 @@
+package Projeto;
+
+public class Cliente_PessoaJuridica extends Cliente {
+    private String CPF;
+
+    public Cliente_PessoaJuridica(String nome, String CPF, String endereco, String telefone, int idade) {
+        super(nome, CPF, endereco, telefone, idade);
+        this.CPF = CPF;
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public void setCpf(String CPF) {
+        this.CPF = CPF;
+    }
+
+    @Override
+    public void visualizar() {
+        super.visualizar();
+        System.out.println("CPF: " + CPF);
+    }
+}
